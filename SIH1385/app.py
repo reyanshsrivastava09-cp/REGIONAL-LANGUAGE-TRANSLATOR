@@ -1,7 +1,6 @@
 import streamlit as st
 from deep_translator import GoogleTranslator
-
-# Set page layout to wide for a side-by-side Google Translate experience
+ Google Translate experience
 st.set_page_config(layout="wide", page_title="SIH1385 Translator")
 
 st.markdown("""
