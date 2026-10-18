@@ -7,20 +7,18 @@ st.markdown("""
     <style>
     /* 0. Dynamic Font Injection from Google Fonts - Fixes mobile visibility issues */
     @import url('https://googleapis.com');
-
-    /* 1. MAX SATURATION Indian Flag Gradient Background */
     .stApp {
         background: linear-gradient(135deg, 
-            rgba(255, 69, 0, 0.85) 0%,      /* Deep, Vivid Ultra-Saturated Saffron */
-            rgba(10, 12, 36, 0.99) 45%,     /* Rich Royal Midnight Blue (Deepens Contrast) */
-            rgba(10, 12, 36, 0.99) 55%,     /* Rich Royal Midnight Blue */
-            rgba(0, 200, 40, 0.75) 100%     /* Deep, Neon Ultra-Saturated Green */
+            rgba(255, 69, 0, 0.85) 0%,      
+            rgba(10, 12, 36, 0.99) 45%,    
+            rgba(10, 12, 36, 0.99) 55%,    
+            rgba(0, 200, 40, 0.75) 100%   
         ) !important;
         background-attachment: fixed !important;
-        color: #f8fafc !important;
+        color: #ffff
     }
     
-    /* Global Text Color Override for Dark Mode visibility */
+   
     h1, h2, h3, p, span, label, div {
         color: #f8fafc !important;
     }
@@ -38,8 +36,7 @@ st.markdown("""
         padding-bottom: 0px;
         filter: drop-shadow(0px 4px 12px rgba(255, 153, 51, 0.5));
     }
-    
-    /* Bigger, Bold Subtitle with Indian Flag Gradient Text & Mobile-Safe Comic Font Engine */
+  
     .sub-title {
         font-family: 'Comic Neue', 'Comic Sans MS', 'Comic Sans', sans-serif !important; 
         font-size: 2.2rem !important; 
@@ -53,7 +50,7 @@ st.markdown("""
         filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.7)); /* Strong shadow to stand out */
     }
     
-    /* 3. Glassmorphism Input Text Area Styling */
+   
     .stTextArea textarea {
         border-radius: 12px !important;
         border: 1px solid rgba(255, 255, 255, 0.25) !important; 
@@ -71,8 +68,8 @@ st.markdown("""
     
     /* Glassmorphic Output Box Styling */
     .output-container {
-        background-color: rgba(22, 24, 38, 0.88) !important; 
-        border: 1px solid rgba(255, 255, 255, 0.25) !important;
+        background-color: rgba(22, 24, 38, 0.88)
+        border: 1px solid rgba(255, 255, 255, 0.25)
         border-radius: 12px;
         min-height: 195px;
         padding: 18px;
@@ -82,12 +79,12 @@ st.markdown("""
         box-shadow: 0 10px 35px 0 rgba(0, 0, 0, 0.55);
     }
     
-    /* Dropdown Selection Box Dark Theme Styling */
+   
     .stSelectbox div[data-baseweb="select"] {
-        background-color: rgba(15, 16, 26, 0.92) !important;
-        border: 1px solid rgba(255, 255, 255, 0.25) !important;
-        color: #ffffff !important;
-        border-radius: 8px;
+        background-color: rgba(15, 16, 26, 0.92) 
+        border: 1px solid rgba(255, 255, 255, 0.25)
+        color: #ffffff
+        border-radius: 10px;
     }
     
     /* 4. High-Vibrancy Action Button */
