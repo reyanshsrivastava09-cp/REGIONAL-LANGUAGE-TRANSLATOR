@@ -108,11 +108,9 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-# App Big Title & Subtitle with dynamic gradient text
 st.markdown('<p class="main-title">Regional Language Translator</p>', unsafe_allow_html=True)
 st.markdown('<p class="sub-title">BY <br>ORIGIN VECTORS</p>', unsafe_allow_html=True)
 
-# Language Dropdown Selection Map
 language_options = [
     ("Hindi", "hi"),
     ("Gujarati", "gu"),
@@ -127,19 +125,15 @@ language_options = [
     ("Assamese", "as"),
 ]
 
-# Display Selectbox (Centered layout)
 col_left, col_mid, col_right = st.columns([1, 2, 1])
 with col_mid:
     selected_tuple = st.selectbox(
         "Choose Target Language:",
         options=language_options,
-        format_func=lambda x: x[0]  
+        format_func=lambda x: x[1]  
     )
-
-# Extract language name and language code safely
 lang_name, lang_code = selected_tuple
 
-# Main Split Columns Layout (Left = Input, Right = Output)
 col1, col2 = st.columns(2)
 
 with col1:
@@ -153,7 +147,6 @@ with col1:
 
 with col2:
     st.markdown(f"### **{lang_name} (Target)**")
-    # Empty placeholder box that mimics the Google Translate look before translation occurs
     output_placeholder = st.empty()
     output_placeholder.markdown('<div class="output-container" style="color: #cbd5e1 !important;">Translation will appear here...</div>', unsafe_allow_html=True)
 st.write("")
@@ -161,10 +154,10 @@ st.write("")
 if st.button("Translate Now"):
     if user_input.strip() != "":
         try:
-            # Performs translation using the GoogleTranslator package
+          
             translated_text = GoogleTranslator(source='en', target=lang_code).translate(user_input)
             
-            # Replaces the output box placeholder with actual translated text
+          
             output_placeholder.markdown(f'<div class="output-container"><b>{translated_text}</b></div>', unsafe_allow_html=True)
         except Exception as e:
             st.error(f"Translation Error: {e}")
