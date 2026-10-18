@@ -154,11 +154,12 @@ st.write("")
 if st.button("Translate Now"):
     if user_input.strip() != "":
         try:
-          
+         
             translated_text = GoogleTranslator(source='en', target=lang_code).translate(user_input)
             
           
-            output_placeholder.markdown(f'<div class="output-container"><b>{translated_text}</b></div>', unsafe_allow_html=True)
+            output_placeholder.markdown(f'<div class="output-container"><b>{translated_text}</b></b></div>', unsafe_allow_html=True)<br>
+         </body>
         except Exception as e:
             st.error(f"Translation Error: {e}")
     else:
