@@ -5,7 +5,6 @@ st.set_page_config(layout="wide", page_title="SIH1385 Translator")
 
 st.markdown("""
     <style>
-    /* 0. Dynamic Font Injection from Google Fonts - Fixes mobile visibility issues */
     @import url('https://googleapis.com');
     .stApp {
         background: linear-gradient(135deg, 
